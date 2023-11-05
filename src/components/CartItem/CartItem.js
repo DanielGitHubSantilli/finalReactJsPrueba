@@ -7,10 +7,10 @@ const CartItem = ({item}) => {
     <div className='d-flex justify-content-around align-items-center'>
       <img src={item.img} alt={item.name} with={'150rem'}/>
       <p>Producto: {item.name}</p>
-      <p>Precio: ${item.precio}</p>
+      <p>Precio: ${item.price}</p>
       <p>Cantidad: {item.quantity}</p>
       <p>Sub total: ${item.quantity * item.price}</p>
-      <button className='btn-btn danger' onClick={()=>deleteItem(item.id)}>X</button>
+      <button className='btn btn-danger' onClick={()=>deleteItem(item.id)}>X</button>
     </div>
   )
 }

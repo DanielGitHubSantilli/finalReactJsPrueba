@@ -6,12 +6,12 @@ const ItemCount = ({stock, onAdd, initial})=>{
 
   const increment = () => {
     if (count < stock) {
-      setCount(count+1)
+      setCount(count + 1)
     } 
   }
   const decrement = () =>{
     if (count > 0) {
-      setCount(count-1)
+      setCount(count - 1)
     } 
   }
   return (

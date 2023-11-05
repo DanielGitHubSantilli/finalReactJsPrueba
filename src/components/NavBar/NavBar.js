@@ -23,7 +23,7 @@ function NavBar(){
               <NavDropdown.Item as={NavLink} to='/'>Todos los productos</NavDropdown.Item>
             </NavDropdown > 
           </Nav>
-          <NavLink style = {{textDecoration:'none'}} to='/cart'><CartWidget /></NavLink>
+          <NavLink style = {{textDecoration:'none'}} to='/Cart'><CartWidget /></NavLink>
           </Navbar.Collapse>
       </Container>
     </Navbar>

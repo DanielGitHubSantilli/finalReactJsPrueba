@@ -1,7 +1,7 @@
 import React from 'react';
-import {Button,Card} from 'react-bootstrap'
+import {Button,Card} from 'react-bootstrap';
 //import item from '../Item/Item'
-import {Link} from "react-router-dom"
+import {Link} from "react-router-dom";
 
 
 const Item =({prod})=>{

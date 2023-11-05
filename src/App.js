@@ -1,19 +1,28 @@
-import React from 'react';
 import './App.css';
-import { BrowserRouter, Routes, Route} from 'react-router-dom';
 import NavBar from './components/NavBar/NavBar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
+import { BrowserRouter, Routes, Route} from 'react-router-dom';
+import { CartProvider } from './context/cartContext';
 import Cart from './components/Cart/Cart';
+import React, {useEffect} from 'react';
+import { addDoc, collection } from 'firebase/firestore';
+import { db } from './services/firebase/firebaseConfig';
+import { products } from './mock/asyncMock'
+//import { getItem } from './mock/asyncMock'
+//import {getProductById} from './mock/asyncMock'
 //en el último video no importa checkout, react y CartProvider
 import CheckOut from './components/CheckOut/CheckOut';
-import { CartProvider } from './context/cartContext';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bulma/css/bulma.css';
 //import ItemCount from './components/ItemCount/ItemCount';
 export const CartContext = React.createContext('');
-//console.log ("CartContext: ",CartContext)
+console.log (CartContext)
 function App() {
+  useEffect(()=>{
+    const collectionProducts= collection(db,'getItem')
+    products.map((item)=> addDoc(collectionProducts(item))) 
+  },[])
   return (
     <div className="App">
         <CartProvider>
@@ -38,7 +47,7 @@ function App() {
           </BrowserRouter>
         </CartProvider>
     </div>
-  );
+  )
 }
 
 export default App;
