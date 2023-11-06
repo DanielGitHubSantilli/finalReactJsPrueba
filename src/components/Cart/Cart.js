@@ -10,10 +10,9 @@ const {cart, clear, total} = useContext(CartContext)//Cart Estaba en minúscula 
    return(
      <div> 
        {cart.lenght  
-       //para recorrer y borrar el carrito y que muestre el total - No me sale la piedad Lenght... Si pongo Cart sí...
+       //para recorrer y borrar el carrito y que muestre el total
          ? <div>
           {cart.map ((item)=><CartItem key={item.id} item={item}/>)} 
-          {/* No me sale la piedad map de ninguna manera*/}
             <p>Total a pagar: ${total()}</p>
             <div>
               <button className='btn btn-danger' onClick={clear}>Variar Carrito</button>

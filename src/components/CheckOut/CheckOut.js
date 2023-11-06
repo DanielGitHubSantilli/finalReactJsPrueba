@@ -17,7 +17,7 @@ const Checkout = () => {
   const finalizarComopra = (e) => {
       e.preventDefault()
       if(!user.name && !user.phone){
-        alert("Los datos deben estar compoletos")
+        alert("Los datos deben estar completos")
       }else{
         let order = {
           user,
