@@ -26,6 +26,8 @@ function NavBar(){
           <NavLink style = {{textDecoration:'none'}} to='/Cart'><CartWidget /></NavLink>
           </Navbar.Collapse>
       </Container>
+      <CartWidget />
+      {/* ver porque no funciona CartWidget */}
     </Navbar>
   )
 }

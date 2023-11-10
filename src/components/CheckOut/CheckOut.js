@@ -59,13 +59,13 @@ const Checkout = () => {
       </div>
       <div className='mb-3'>
         <label cLassName='form-label'> Repita email por favor</label>
-        <input className='form-control'type= 'email' placeholder='e-mail@email.com' name= 'mail' onChange={((e)=>setValidateEmail(e.target.value))} required/>
+        <input className='form-control'type='email' placeholder='e-mail@email.com' name= 'mail' onChange={((e)=>setValidateEmail(e.target.value))} required/>
       </div>
       <button className='btn btn-dark' type='submit' disabled={validateEmail !== user.mail }>Generar Orden</button>
     </form>
     </div>
-}
-</div>
+    }
+  </div>
 )
 }
 export default Checkout;

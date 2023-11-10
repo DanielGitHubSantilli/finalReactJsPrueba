@@ -15,15 +15,6 @@ const ItemDetailContainer = () => {
   const [loader,setLoader] = useState(false)
   const { id } = useParams()
   
-  // useEffect(() => {
-  //   setLoader(true)
-  //     getItem(id)
-  //     getProductById(id)
-  //     .then ((res)=>setProduct(res))
-  //     .catch((error)=> console.log(error))
-  //     .finally(()=>setLoader(false))
-  // },[id])
-
   useEffect(()=>{
     setLoader(true)
     const collectionProd=collection(db,'products')
@@ -42,27 +33,4 @@ const ItemDetailContainer = () => {
   )
 }
   export default ItemDetailContainer;
-    // const docRef = doc(db,'products', id)
-
-    // getDoc(docRef)
-    //   .then(response => {
-    //     const data = response.data()
-    //     const ProductAdapted ={id: response.id, ...data}
-    //     setProduct(ProductAdapted)
-    //     })
-    //     .cath(error=>{
-    //       console.log(error)
-    //     })
-    //     .finally(()=>{
-    //       setLoader(false)
-    //     })
-    // },[id])
-    // return(
-    //   <div>
-    //     {loader ? <p>cargando...</p>: <ItemDetail product={product}/>}
-    //   </div>
-    // )    
-    // }
-    
-
-
+  

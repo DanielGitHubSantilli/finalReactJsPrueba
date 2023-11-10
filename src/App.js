@@ -16,6 +16,7 @@ import React from 'react';
 import CheckOut from './components/CheckOut/CheckOut';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bulma/css/bulma.css';
+import 'bootstrap/dist/css/bootstrap.min.css'
 //import ItemCount from './components/ItemCount/ItemCount';
 export const CartContext = React.createContext('');
 console.log (CartContext)

@@ -1,13 +1,13 @@
 //simula la promesa
 export const products =[
-  {
-    stock:300,
-    category: 'limpiadores_liquidos',
-    description: 'Detergente 1000 cm3',
-    img:"/assets/cif.svg",
-    name:'Detergente',
-    price: "900"
-  },
+  // {
+  //   stock:300,
+  //   category: 'limpiadores_liquidos',
+  //   description: 'Detergente 1000 cm3',
+  //   img:"/assets/cif.svg",
+  //   name:'Detergente',
+  //   price: "900"
+  // },
   {
     stock:300,
     category: 'limpiadores_cremosos',
