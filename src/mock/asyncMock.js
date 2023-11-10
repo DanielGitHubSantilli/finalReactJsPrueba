@@ -1,13 +1,13 @@
 //simula la promesa
-export const products =[
-  // {
-  //   stock:300,
-  //   category: 'limpiadores_liquidos',
-  //   description: 'Detergente 1000 cm3',
-  //   img:"/assets/cif.svg",
-  //   name:'Detergente',
-  //   price: "900"
-  // },
+const products =[
+   {
+     stock:300,
+     category: 'limpiadores_liquidos',
+     description: 'Detergente 1000 cm3',
+     img:"/assets/cif.svg",
+     name:'Detergente',
+     price: "900"
+  },
   {
     stock:300,
     category: 'limpiadores_cremosos',
@@ -26,7 +26,7 @@ export const products =[
   }
 ]
 
-export const getProducts = () =>{
+ export const getProducts = () =>{
   return new Promise((resolve, reject)=>{ 
     let error = false
     setTimeout(()=>{
@@ -54,4 +54,4 @@ export const getItem =(id)=>{
 //     }, 500)
 //   })
 // };
- 
+export default products;

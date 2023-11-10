@@ -1,10 +1,11 @@
-import { useState, useEffect } from "react"
+import { useState, useEffect } from "react";
 //import ItemCount from "../ItemCount/ItemCount"
-import ItemList from "../ItemList/ItemList"
-import { useParams } from "react-router-dom"
-import "./ItemListContainer.css"
-import { getDocs, collection, query, where } from "firebase/firestore"
-import { db } from "../../services/firebase/firebaseConfig"
+import ItemList from "../ItemList/ItemList";
+import { useParams } from "react-router-dom";
+import "./ItemListContainer.css";
+import { getDocs, collection, query, where } from "firebase/firestore";
+import { db } from "../../services/firebase/firebaseConfig";
+//import products from '../../mock/asyncMock';
 
 const ItemListContainer = ({ greeting }) => {
 
@@ -17,10 +18,10 @@ useEffect(()=>{
   const collectionProducts = categoryId ? query(collection(db,"products"),where("categoryId","==",categoryId)):collection(db,"products")
   getDocs(collectionProducts)
   .then((res)=> {
-    const list = res.docs.map((product)=>{
+    const list = res.docs.map((products)=>{
       return{
-        id:product.id,
-        ...product.data()
+        id:products.id,
+        ...products.data()
       }
     })
     setProducts(list)

@@ -6,10 +6,12 @@ import { BrowserRouter, Routes, Route} from 'react-router-dom';
 import { CartProvider } from './context/cartContext';
 import Cart from './components/Cart/Cart';
 import React from 'react';
+
+import { useEffect,useState } from 'react';
 //, {useEffect}
-//import { addDoc, collection } from 'firebase/firestore';
-//import { db } from './services/firebase/firebaseConfig';
-//import { products } from './mock/asyncMock'
+import { addDoc, collection } from 'firebase/firestore';
+import { db } from './services/firebase/firebaseConfig';
+import { products } from './mock/asyncMock'
 //import { getItem } from './mock/asyncMock'
 //import {getProductById} from './mock/asyncMock'
 //en el último video no importa checkout, react y CartProvider
@@ -21,10 +23,10 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 export const CartContext = React.createContext('');
 console.log (CartContext)
 function App() {
-  // useEffect(()=>{
-  //   const collectionProducts= collection(db,'product')
-  //   products.map((item)=> addDoc(collectionProducts,item)) 
-  // },[])
+   useEffect(()=>{
+     const collectionProducts= collection(db,'product')
+     products.map((item)=> addDoc(collectionProducts,item)) 
+   },[])
   return (
     <div className="App">
         <CartProvider>
