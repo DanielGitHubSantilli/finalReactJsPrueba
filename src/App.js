@@ -7,19 +7,19 @@ import { CartProvider } from './context/cartContext';
 import Cart from './components/Cart/Cart';
 import React from 'react';
 
-import { useEffect,useState } from 'react';
-//, {useEffect}
+import { useEffect } from 'react';
 import { addDoc, collection } from 'firebase/firestore';
 import { db } from './services/firebase/firebaseConfig';
-import { products } from './mock/asyncMock'
+import  products from './mock/asyncMock';
 //import { getItem } from './mock/asyncMock'
 //import {getProductById} from './mock/asyncMock'
 //en el último video no importa checkout, react y CartProvider
 import CheckOut from './components/CheckOut/CheckOut';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bulma/css/bulma.css';
-import 'bootstrap/dist/css/bootstrap.min.css'
-//import ItemCount from './components/ItemCount/ItemCount';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+
 export const CartContext = React.createContext('');
 console.log (CartContext)
 function App() {
